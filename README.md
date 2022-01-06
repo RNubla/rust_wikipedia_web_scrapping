@@ -1,6 +1,7 @@
 # Rust Wikipedia Web Scraper
 
 This is a simple rust project that scrapes wikipedia for articles
+
 ```
 USAGE:
     wikipedia_web_scrapping.exe [OPTIONS]
