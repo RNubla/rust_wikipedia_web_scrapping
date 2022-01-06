@@ -3,7 +3,7 @@ use scraper::{Html, Selector};
 
 fn main() {
     let matches = App::new("Wikipedia Scraper")
-        .version("0.0.1")
+        .version("0.1.0")
         .author("Robert Nubla")
         .about("Scrapes Wikipedia for a list of articles")
         .arg(
