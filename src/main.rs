@@ -13,9 +13,23 @@ fn main() {
                 .takes_value(true)
                 .help("Search for articles"),
         )
+        .arg(
+            Arg::new("language")
+                .short('l')
+                .long("language")
+                .takes_value(true)
+                .help("Language to search in"),
+        )
         .get_matches();
 
-    if matches.is_present("search") {
+    if matches.is_present("search") && matches.is_present("language") {
+        let url = format!(
+            "https://{}.wikipedia.org/wiki/{}",
+            matches.value_of("language").unwrap(),
+            matches.value_of("search").unwrap()
+        );
+        articles(&url).unwrap();
+    } else if matches.is_present("search") {
         let url = format!(
             "https://en.wikipedia.org/wiki/{}",
             matches.value_of("search").unwrap()
