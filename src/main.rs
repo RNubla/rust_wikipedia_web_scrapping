@@ -1,7 +1,6 @@
 use clap::{App, Arg};
 use scraper::{Html, Selector};
-use select::document::Document;
-use select::predicate::{Attr, Class, Name, Or, Predicate};
+
 fn main() {
     let matches = App::new("Wikipedia Scraper")
         .version("0.0.1")
