@@ -18,7 +18,7 @@ fn main() {
                 .short('l')
                 .long("language")
                 .takes_value(true)
-                .help("Language to search in"),
+                .help("Language to search in (default: en)\nFor a list of languages, see https://en.wikipedia.org/wiki/List_of_Wikipedias#Editions_overview"),
         )
         .get_matches();
 
